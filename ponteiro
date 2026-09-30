@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void maiorValor(int a, int b, int *maior) {
+
+    if ( a > b) {
+        *maior = a ;
+        printf("O maior valor e: %d\n", a) ;
+     } else {
+        *maior = b ;
+        printf("O maior valor e: %d\n", b) ;
+     }
+
+}
+
+int main () {
+
+    int a, b, resultado ;
+    int *p ;
+    int *z ;
+
+    printf("Insira dois numeros: \n") ;
+    scanf("%d %d", &a, &b) ;
+
+    z = &a ;
+    p = &b ;
+
+    maiorValor(a,b, &resultado) ;
+
+    printf("O maior e: %d\n", resultado ) ;
+}
